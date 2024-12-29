@@ -43,6 +43,15 @@ let GameDB = {
         isTimeRounded: false,
       },
       {
+        id: 14,
+        baseTime: 12000,
+        maxPop: 120,
+        baseAP: 2300000,
+        // Difar, Kento, Chromium
+        baseMats: [0, 0, 0, 0, 0, 0, 0, 0],
+        isTimeRounded: false,
+      },
+      {
         id: 21,
         baseTime: 150,
         maxPop: 80,
@@ -69,6 +78,16 @@ let GameDB = {
         baseMats: [0, 0, 0, 2200, 320, 260, 0, 0],
         isTimeRounded: true,
       },
+
+      // {
+      //   id: 24,
+      //   baseTime: 72000,
+      //   maxPop: 500,
+      //   baseAP: 11500,
+      //   // Exon, Organium, Adamorphium
+      //   baseMats: [0, 0, 0, 2200, 320, 260, 0, 0],
+      //   isTimeRounded: true,
+      // },
       {
         id: 31,
         baseTime: 3000,
@@ -224,6 +243,7 @@ let GameDB = {
       [300 * 4, 'The 10th Badge'], // 10th
       [300 * 4, 'The 11th Badge'], // 11th
     ],
+    //TODO: check costs
     projectNextLevelCost(projectID, level, costDiv, ouroEnabled) {
       let project = this.projects[projectID]
 

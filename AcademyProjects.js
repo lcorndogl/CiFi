@@ -339,9 +339,8 @@ function generateRunYield() {
         .getStartCost()
         .map((v, i) => {
           if (!v) return ''
-          return `<div class="field-projmat">${
-            GameDB.academy.materials[i]
-          }: ${formatLargeInteger(v)}</div>`
+          return `<div class="field-projmat">${GameDB.academy.materials[i]
+            }: ${formatLargeInteger(v)}</div>`
         })
         .join('')
   }
@@ -506,9 +505,8 @@ function UpdateRequirement() {
 
     // can predict when cm > 12
     if (currentCm > 12) {
-      portalPanel.bpRequirement.innerText = `Current BP: ${currentBp} ${
-        neededBp ? `/ ${neededBp}` : ''
-      }`
+      portalPanel.bpRequirement.innerText = `Current BP: ${currentBp} ${neededBp ? `/ ${neededBp}` : ''
+        }`
     }
   } catch (e) {
     console.error(e)
@@ -534,9 +532,8 @@ function UpdateRequirement() {
     }
 
     if (leftProj < 0 && badgeName) {
-      portalPanel.badgeRequirement.innerText = `To ${badgeName}: ${
-        leftProj * -1
-      } Proj`
+      portalPanel.badgeRequirement.innerText = `To ${badgeName}: ${leftProj * -1
+        } Proj`
     }
   } catch (e) {
     console.error(e)

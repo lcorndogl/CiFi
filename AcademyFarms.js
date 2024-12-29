@@ -308,7 +308,7 @@ academyFarmPortal.pages.default.initFunction = function (panel) {
     table.appendChild(tbody)
 
     for (let plannet = 0; plannet < GameDB.academy.planets; plannet++) {
-      for (let farm = 0; farm < 3; farm++) {
+      for (let farm = 0; farm < ((plannet < 2) ? '4' : '3'); farm++) {
         const row = createElement('tr')
         row.appendChild(
           createElement('td', 'text-end', null, `${plannet + 1}-${farm + 1}`),
@@ -715,7 +715,7 @@ function maximizeMissionRate() {
   GetMaxMissionRate()
 
   for (let planet = 0; planet < GameDB.academy.planets; planet++) {
-    for (let farm = 0; farm < 3; farm++) {
+    for (let farm = 0; farm < ((plannet < 2) ? '4' : '3'); farm++) {
       for (let personnel = 0; personnel < 4; personnel++) {
         let type = GameDB.academy.personnel[personnel]
         portalPanel[`farm${planet}${farm}${type}`].value =
